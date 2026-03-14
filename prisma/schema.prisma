@@ -1,0 +1,114 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Role {
+  id                        Int       @id @default(autoincrement())
+
+  // Core identifiers
+  roleId                    String    @unique @map("Role ID")          // R0001, R0002, ...
+  name                      String    @map("Role Name")
+  slug                      String?   @unique                           // you can generate: brand-finance-manager
+  specialization            String    @map("Specialization")           // Finance, Marketing, Operations, ...
+  sector                    Json?   @map("Sector")                   // can be comma-separated or JSON later
+  roleLevel                 String?   @map("Role Level")               // Entry Level, Mid Level (Early Growth), ...
+
+  // Descriptions
+  shortDescription          String?   @map("Short Description")
+  whatThisRoleDoes          String?   @map("What This Role Does")
+  whyCompaniesHire          String?   @map("Why Companies Hire This Role")
+
+  // Responsibilities (better as Json array or separate table in future)
+  responsibilities          Json?     @map("Responsibility 1 ... 7")   // store as ["resp1", "resp2", ...]
+
+  // KPIs
+  kpis                      Json?     @map("KPI 1 ... 4")              // ["KPI1", "KPI2", ...]
+
+  // Skills & Tools
+  technicalSkills           Json?     @map("Technical Skills")
+  toolsUsed                 Json?     @map("Tools Used")
+  certifications            Json?     @map("Certifications")
+
+  // Soft skills (1–10 scale)
+  communication             Int? 
+  analyticalAbility         Int?
+  leadership                Int?
+  negotiation               Int?
+  stakeholderManagement     Int?
+  attentionToDetail         Int?
+
+  // Personality fit (yes/no or 1–10, here using Int for scoring)
+  personalityAnalytical     Int?      @map("Personality - Analytical")
+  personalityCreative       Int?      @map("Personality - Creative")
+  personalityStructured     Int?      @map("Personality - Structured")
+  personalityRiskAppetite   Int?      @map("Personality - Risk Appetite")
+  personalityPeopleInteraction Int?
+  personalityFieldWork      Int?
+  personalityPressureLevel  Int?
+
+  // Career progression & salary (can be Json or separate model later)
+  careerProgression         Json?                                       // flexible array of {years, title, salary}
+  salaryProgression         Json?                                       // or keep separate fields below
+
+  // Keeping the salary bands as-is (you can normalize later)
+  years0_2_Title            String?   @map("Years 0-2 Title")
+  years0_2_Salary           String?   @map("Years 0-2 Salary (LPA)")
+  years3_5_Title            String?   @map("Years 3-5 Title")
+  years3_5_Salary           String?   @map("Years 3-5 Salary (LPA)")
+  years6_10_Title           String?   @map("Years 6-10 Title")
+  years6_10_Salary          String?   @map("Years 6-10 Salary (LPA)")
+  years10_plus_Title        String?   @map("Years 10+ Title")
+  years10_plus_Salary       String?   @map("Years 10+ Salary (LPA)")
+
+  avgEntrySalaryTier1       Float?    @map("Avg Entry Salary Tier 1 (LPA)")
+  avgEntrySalaryTier2       Float?    @map("Avg Entry Salary Tier 2 (LPA)")
+
+  // Other attributes (mostly categorical or scale)
+  growthSpeed               String?                                     // Stable, Fast, Medium, ...
+  averageWorkHoursPerWeek   String?   @map("Average Work Hours/Week")
+  travelFrequency           TravelFrequency?                                     // Low, Medium, High
+  weekendWorkLikelihood     String?                                     // Low, Medium, High
+  stressLevel               StressLevel?                                     // Low, Medium, High, Very High
+  growthTrend               String?                                     // Stable, Growing, Moderate, ...
+  automationRisk            String?                                     // Low, Medium, High
+  futureRelevanceScore      Int?                                        // numeric score
+
+  top5Companies             Json?                                     // comma separated or Json[]
+  suitsYouIf                Json?                                       // ["point1", "point2", ...]
+  avoidIf                   Json?                                       // ["avoid1", "avoid2", ...]
+
+  switchability             Int?                                        // 1–10 ?
+  brandValue                Int?
+  learningCurveDifficulty   Int?                                        @map("Learning Curve Difficulty")
+  entryBarrier              Int?
+
+  // Timestamps
+  createdAt                 DateTime  @default(now())
+  updatedAt                 DateTime  @updatedAt
+
+  @@map("roles")
+}
+
+enum StressLevel {
+  Low
+  Medium
+  High
+  VeryHigh
+}
+
+enum TravelFrequency {
+  Low
+  Medium
+  High
+}
