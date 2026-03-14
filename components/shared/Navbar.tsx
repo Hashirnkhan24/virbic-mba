@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import clsx from "clsx";
 import ThemeToggle from "./ThemeToggle";
+import RoleSearch from "../search/RoleSearch";
 
 const specializations = [
 	{
@@ -89,6 +90,7 @@ export default function Navbar() {
 						>
 							Amplivate
 						</a>
+						<RoleSearch />
 						<ThemeToggle />
 					</div>
 				</div>

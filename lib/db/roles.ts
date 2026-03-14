@@ -47,3 +47,16 @@ export async function getRoleBySlug(slug: string) {
 		},
 	});
 }
+
+export async function getAllRoles() {
+	return prisma.role.findMany({
+		select: {
+			name: true,
+			slug: true,
+			specialization: true,
+		},
+		orderBy: {
+			name: "asc",
+		},
+	});
+}
