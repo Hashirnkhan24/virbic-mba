@@ -14,7 +14,7 @@ interface RoleData {
 	futureRelevanceScore: number | null;
 	whatThisRoleDoes: string;
 	whyCompaniesHire?: string | null;
-	sectors: string | string[] | null;
+	sector: string | string[] | null;
 	responsibilities: string | string[] | null;
 	kpis: string | string[] | null;
 	top5Companies: string | string[] | null;
