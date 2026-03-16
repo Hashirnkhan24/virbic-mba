@@ -21,7 +21,7 @@ model Role {
   name                      String    @map("Role Name")
   slug                      String?   @unique                           // you can generate: brand-finance-manager
   specialization            String    @map("Specialization")           // Finance, Marketing, Operations, ...
-  sector                    Json?   @map("Sector")                   // can be comma-separated or JSON later
+  sector                    String?   @map("Sector")                   // can be comma-separated or JSON later
   roleLevel                 String?   @map("Role Level")               // Entry Level, Mid Level (Early Growth), ...
 
   // Descriptions

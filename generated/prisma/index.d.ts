@@ -964,6 +964,7 @@ export namespace Prisma {
     name: string | null
     slug: string | null
     specialization: string | null
+    sector: string | null
     roleLevel: string | null
     shortDescription: string | null
     whatThisRoleDoes: string | null
@@ -1013,6 +1014,7 @@ export namespace Prisma {
     name: string | null
     slug: string | null
     specialization: string | null
+    sector: string | null
     roleLevel: string | null
     shortDescription: string | null
     whatThisRoleDoes: string | null
@@ -1172,6 +1174,7 @@ export namespace Prisma {
     name?: true
     slug?: true
     specialization?: true
+    sector?: true
     roleLevel?: true
     shortDescription?: true
     whatThisRoleDoes?: true
@@ -1221,6 +1224,7 @@ export namespace Prisma {
     name?: true
     slug?: true
     specialization?: true
+    sector?: true
     roleLevel?: true
     shortDescription?: true
     whatThisRoleDoes?: true
@@ -1417,7 +1421,7 @@ export namespace Prisma {
     name: string
     slug: string | null
     specialization: string
-    sector: JsonValue | null
+    sector: string | null
     roleLevel: string | null
     shortDescription: string | null
     whatThisRoleDoes: string | null
@@ -1741,7 +1745,7 @@ export namespace Prisma {
       name: string
       slug: string | null
       specialization: string
-      sector: Prisma.JsonValue | null
+      sector: string | null
       roleLevel: string | null
       shortDescription: string | null
       whatThisRoleDoes: string | null
@@ -2221,7 +2225,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Role", 'String'>
     readonly slug: FieldRef<"Role", 'String'>
     readonly specialization: FieldRef<"Role", 'String'>
-    readonly sector: FieldRef<"Role", 'Json'>
+    readonly sector: FieldRef<"Role", 'String'>
     readonly roleLevel: FieldRef<"Role", 'String'>
     readonly shortDescription: FieldRef<"Role", 'String'>
     readonly whatThisRoleDoes: FieldRef<"Role", 'String'>
@@ -2877,7 +2881,7 @@ export namespace Prisma {
     name?: StringFilter<"Role"> | string
     slug?: StringNullableFilter<"Role"> | string | null
     specialization?: StringFilter<"Role"> | string
-    sector?: JsonNullableFilter<"Role">
+    sector?: StringNullableFilter<"Role"> | string | null
     roleLevel?: StringNullableFilter<"Role"> | string | null
     shortDescription?: StringNullableFilter<"Role"> | string | null
     whatThisRoleDoes?: StringNullableFilter<"Role"> | string | null
@@ -3000,7 +3004,7 @@ export namespace Prisma {
     NOT?: RoleWhereInput | RoleWhereInput[]
     name?: StringFilter<"Role"> | string
     specialization?: StringFilter<"Role"> | string
-    sector?: JsonNullableFilter<"Role">
+    sector?: StringNullableFilter<"Role"> | string | null
     roleLevel?: StringNullableFilter<"Role"> | string | null
     shortDescription?: StringNullableFilter<"Role"> | string | null
     whatThisRoleDoes?: StringNullableFilter<"Role"> | string | null
@@ -3128,7 +3132,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Role"> | string
     slug?: StringNullableWithAggregatesFilter<"Role"> | string | null
     specialization?: StringWithAggregatesFilter<"Role"> | string
-    sector?: JsonNullableWithAggregatesFilter<"Role">
+    sector?: StringNullableWithAggregatesFilter<"Role"> | string | null
     roleLevel?: StringNullableWithAggregatesFilter<"Role"> | string | null
     shortDescription?: StringNullableWithAggregatesFilter<"Role"> | string | null
     whatThisRoleDoes?: StringNullableWithAggregatesFilter<"Role"> | string | null
@@ -3187,7 +3191,7 @@ export namespace Prisma {
     name: string
     slug?: string | null
     specialization: string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: string | null
     roleLevel?: string | null
     shortDescription?: string | null
     whatThisRoleDoes?: string | null
@@ -3247,7 +3251,7 @@ export namespace Prisma {
     name: string
     slug?: string | null
     specialization: string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: string | null
     roleLevel?: string | null
     shortDescription?: string | null
     whatThisRoleDoes?: string | null
@@ -3306,7 +3310,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     slug?: NullableStringFieldUpdateOperationsInput | string | null
     specialization?: StringFieldUpdateOperationsInput | string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: NullableStringFieldUpdateOperationsInput | string | null
     roleLevel?: NullableStringFieldUpdateOperationsInput | string | null
     shortDescription?: NullableStringFieldUpdateOperationsInput | string | null
     whatThisRoleDoes?: NullableStringFieldUpdateOperationsInput | string | null
@@ -3366,7 +3370,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     slug?: NullableStringFieldUpdateOperationsInput | string | null
     specialization?: StringFieldUpdateOperationsInput | string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: NullableStringFieldUpdateOperationsInput | string | null
     roleLevel?: NullableStringFieldUpdateOperationsInput | string | null
     shortDescription?: NullableStringFieldUpdateOperationsInput | string | null
     whatThisRoleDoes?: NullableStringFieldUpdateOperationsInput | string | null
@@ -3426,7 +3430,7 @@ export namespace Prisma {
     name: string
     slug?: string | null
     specialization: string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: string | null
     roleLevel?: string | null
     shortDescription?: string | null
     whatThisRoleDoes?: string | null
@@ -3485,7 +3489,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     slug?: NullableStringFieldUpdateOperationsInput | string | null
     specialization?: StringFieldUpdateOperationsInput | string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: NullableStringFieldUpdateOperationsInput | string | null
     roleLevel?: NullableStringFieldUpdateOperationsInput | string | null
     shortDescription?: NullableStringFieldUpdateOperationsInput | string | null
     whatThisRoleDoes?: NullableStringFieldUpdateOperationsInput | string | null
@@ -3545,7 +3549,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     slug?: NullableStringFieldUpdateOperationsInput | string | null
     specialization?: StringFieldUpdateOperationsInput | string
-    sector?: NullableJsonNullValueInput | InputJsonValue
+    sector?: NullableStringFieldUpdateOperationsInput | string | null
     roleLevel?: NullableStringFieldUpdateOperationsInput | string | null
     shortDescription?: NullableStringFieldUpdateOperationsInput | string | null
     whatThisRoleDoes?: NullableStringFieldUpdateOperationsInput | string | null
@@ -3805,6 +3809,7 @@ export namespace Prisma {
     name?: SortOrder
     slug?: SortOrder
     specialization?: SortOrder
+    sector?: SortOrder
     roleLevel?: SortOrder
     shortDescription?: SortOrder
     whatThisRoleDoes?: SortOrder
@@ -3854,6 +3859,7 @@ export namespace Prisma {
     name?: SortOrder
     slug?: SortOrder
     specialization?: SortOrder
+    sector?: SortOrder
     roleLevel?: SortOrder
     shortDescription?: SortOrder
     whatThisRoleDoes?: SortOrder
