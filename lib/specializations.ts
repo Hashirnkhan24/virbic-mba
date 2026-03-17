@@ -623,9 +623,9 @@ export const mbaSpecializations: Specialization[] = [
 		],
 	},
 	{
-		id: "information-systems",
+		id: "systems",
 		name: "MBA in Information Systems",
-		shortName: "Information Systems",
+		shortName: "systems",
 		overview: {
 			description:
 				"MBA in Information Systems focuses on technology management, digital transformation, business analytics, and IT strategy. Professionals in this field work on understanding, managing, and improving the technology infrastructure and digital capabilities of organizations.",
