@@ -77,19 +77,11 @@ export default function Navbar() {
 							V
 						</div>
 						<span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">
-							Virbic
+							Vantage
 						</span>
 					</Link>
 
 					<div className="flex items-center gap-6">
-						<a
-							href="https://amplivate.in"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="hidden sm:block text-sm font-medium text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
-						>
-							Amplivate
-						</a>
 						<RoleSearch />
 						<ThemeToggle />
 					</div>

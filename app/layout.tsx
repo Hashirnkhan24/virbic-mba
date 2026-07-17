@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: {
-		default: "Virbic — MBA Career Role Explorer",
-		template: "%s | Virbic",
+		default: "Vantage — MBA Career Role Explorer",
+		template: "%s | Vantage",
 	},
 	description:
-		"Explore and compare 290+ MBA career roles across Marketing, Finance, Operations, HR, Sales, and Systems. Virbic helps MBA students understand responsibilities, skills, salary growth, stress levels, and career paths.",
+		"Explore and compare 290+ MBA career roles across Marketing, Finance, Operations, HR, Sales, and Systems. Vantage helps MBA students understand responsibilities, skills, salary growth, stress levels, and career paths.",
 	keywords: [
 		"MBA careers",
 		"MBA roles",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 		"operations roles MBA",
 	],
 	openGraph: {
-		title: "Virbic — MBA Career Role Explorer",
+		title: "Vantage — MBA Career Role Explorer",
 		description:
 			"Explore and compare MBA roles across specializations to gain career clarity.",
 		type: "website",

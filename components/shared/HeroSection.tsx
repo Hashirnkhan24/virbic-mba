@@ -100,7 +100,7 @@ export default function HeroSection() {
 						transition={{ delay: 0.2 }}
 						className="mt-8 text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
 					>
-						Stop guessing your future. Virbic decodes 290+ MBA roles with
+						Stop guessing your future. Vantage decodes 290+ MBA roles with
 						real-world insights on salary growth, stress levels, and automation
 						risks.
 					</motion.p>

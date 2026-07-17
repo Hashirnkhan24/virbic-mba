@@ -32,7 +32,7 @@ const features = [
 	},
 ];
 
-export default function WhyVirbic() {
+export default function WhyVantage() {
 	return (
 		<section className="relative py-24 bg-white dark:bg-slate-950 transition-colors duration-300 overflow-hidden min-h-[70vh] flex items-center">
 			{/* Background Decorative Elements - Identical to HeroSection */}
@@ -45,7 +45,7 @@ export default function WhyVirbic() {
 				{/* Section Header */}
 				<div className="text-center mb-16">
 					<h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
-						Why Virbic
+						Why Vantage
 					</h2>
 					<p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
 						Empowering your career journey with data-driven insights and
